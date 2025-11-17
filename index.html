@@ -1,22 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Oswald:wght@700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Demo Form</h1>
+    </header>
+    <main>
+      <form action="/" method="GET" >
+          <section>
+        <h2>YOUR PERSONAL DETAILS</h2>
+      
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input type="text" name="user-name" id="username" required placeholder="popescu"/>
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" required/>
+            </li>
+            <li>
+              <label for="userpassword">your password</label>
+              <input type="password" name="user-password" id="userpassword" required minlength="7"/>
+            </li>
+         
+           </ul>
+        </section>
 
-    <title>panteroidul</title>
- 
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="index.js"   charset="utf-8"></script>
-</head>
-<body>
-    <h1>motanul cu cel mai comun nume: Felix</h1>
-  
-    <img src="P1130317copy.JPG" width="360px" alt="img with the cat" id="img1">
+        <section>
+          <h2>MORE DETAILS</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input type="number" step="1" name="user-age" id="userage" required min="18" max="100"/>
+            </li>
+            <li>
+            <label for="birthdate">your birthday</label>
+            <input type="date" name="user-birthdate" id="birthdate" required min="1921-01-01" max="2003-01-01"/>
+         
+        </li>
+   
+        <li>
+      <label for="favorite-color">Your favorite color</label>
+        <select name="favorite-color" id="favorite-color">
+          <option value="blue">blue</option>
+          <option value="black">black</option>
+          <option value="red">red</option>
+          </select>
+</li>  
+       <li>
+        <label for="usermessage">Your message</label>
+        <textarea name="user-message" id="usermessage" rows="8"></textarea>
+           </li>
+      </ul>      
+    </section>
+
+<section>
+  <h2>HOW SHOULD WE VERIFY YOUR ACCOUNT?</h2>
+<ul>  
+  <li class="form-control-inline">
+  <input type="radio" name="verify"  id="verify-text-message"  value="text-message"/>
+
+          <label for="verify-text-message">via text message (sms)</label>
+          </li>
+
+        <li class="form-control-inline">
+           <input type="radio" name="verify" id="verify-phone" value="phone" />
+          <label for="verify-phone">via a phone call</label>
+          </li>
+
+        <li class="form-control-inline">
+      <input type="radio" name="verify" id="verify-email" value="email" />
+        <label for="verify-email">via an email</label>
+        </li>
        
-    
-</body>
+        </ul>
+        </section>
+<hr>
+<section>
+  <H2>HOW SHOULD WE CONTACT YOU</H2>
+        <ul>    
+        
+        <li class="form-control-inline">
+          <input
+            type="checkbox"
+            id="contact-email"
+            name="contact"
+            value="email"
+          />
+          <label for="contact-email">Contact me via email</label>
+        </li>
+        <li class="form-control-inline">
+          <input
+            type="checkbox"
+            id="contact-phone"
+            name="contact"
+            value="phone"
+          />
+          <label for="contact-phone">Contact me via phone</label></section>
+        </li>
+     </HR>
+         <li class="form-control-inline">
+          <input type="checkbox" id="agree-terms" name="terms" />
+          <label for="agree-terms">Agree to terms</label>
+        </li>
+      </ul>
+   
 
-
+        </section>
+         
+        <section>
+          <!-- <button type="reset">Clear</button> -->
+          <button type="submit">Submit</button>
+        </section>
+      
+       </form>
+    </main>
+  </body>
 </html>
